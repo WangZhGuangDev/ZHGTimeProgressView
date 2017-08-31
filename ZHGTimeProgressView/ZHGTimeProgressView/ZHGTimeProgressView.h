@@ -48,7 +48,6 @@
  */
 +(instancetype)initWithFrame:(CGRect)frame lineWidth:(CGFloat)lineWidth;
 
-+(instancetype)circleView;
 
 /**
  开始

@@ -40,12 +40,6 @@
 
 @implementation ZHGTimeProgressView
 
-+(instancetype)circleView {
-    ZHGTimeProgressView *circleView = [[self alloc] init];
-    [circleView setupSubViews];
-    return circleView;
-}
-
 #pragma mark - init
 +(instancetype)initWithFrame:(CGRect)frame lineWidth:(CGFloat)lineWidth {
     return [[self alloc] initWithFrame:frame lineWidth:lineWidth];
@@ -71,7 +65,6 @@
 }
 
 -(void)setupSubViews {
-//    self.backgroundColor = [UIColor colorWithRed:100 / 255.0 green:100 / 255.0 blue:100 / 255.0 alpha:1.0];
     [self addSubview:self.timeLabel];
     [self.layer addSublayer:self.backLayer];
     [self.layer addSublayer:self.circleLayer];
