@@ -1,15 +1,12 @@
 //
 //  ZHGCircleProgressView.m
-//  贝塞尔曲线
+//  ZHGTimeProgressView
 //
 //  Created by DDing_Work on 2017/8/28.
-//  Copyright © 2017年 王忠光. All rights reserved.
+//  Copyright © 2017年 DDing_Work. All rights reserved.
 //
 
 #import "ZHGTimeProgressView.h"
-
-#define  maxNum MAX(self.frame.size.width, self.frame.size.height)
-#define  minNum MIN(self.frame.size.width, self.frame.size.height)
 
 #define Width self.bounds.size.width
 #define Height self.bounds.size.height

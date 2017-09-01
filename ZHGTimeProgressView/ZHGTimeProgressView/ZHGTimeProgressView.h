@@ -1,9 +1,9 @@
 //
 //  ZHGCircleProgressView.h
-//  贝塞尔曲线
+//  ZHGTimeProgressView
 //
 //  Created by DDing_Work on 2017/8/28.
-//  Copyright © 2017年 王忠光. All rights reserved.
+//  Copyright © 2017年 DDing_Work. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
