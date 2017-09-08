@@ -11,6 +11,8 @@
 #define Width self.bounds.size.width
 #define Height self.bounds.size.height
 
+#define RGB(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
 @interface ZHGTimeProgressView ()
 
 {
@@ -201,7 +203,16 @@
     self.circleLayer = nil;
 }
 
-
+-(void)addCAGradientLayer {
+    //设置渐变颜色
+    CAGradientLayer *gradientLayer =  [CAGradientLayer layer];
+    gradientLayer.frame = self.bounds;
+    [gradientLayer setColors:[NSArray arrayWithObjects:(id)[RGB(150,252,153, 1.f) CGColor],(id)[RGB(87, 251, 91, 1.f) CGColor],(id)[RGB(79, 190, 91, 1.f) CGColor], nil]];
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    gradientLayer.endPoint = CGPointMake(0, 1);
+    [gradientLayer setMask:_circleLayer]; //用progressLayer来截取渐变层
+    [self.layer addSublayer:gradientLayer];
+}
 
 #pragma mark -- SEL Action
 - (void)removeRippleLayer:(CAShapeLayer *)rippleLayer
